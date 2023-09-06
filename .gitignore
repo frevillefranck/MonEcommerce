@@ -1,0 +1,6 @@
+# librairies node
+/vendor/
+# variables d'environnemen
+.env
+# fichier init bdd etc
+/database/
