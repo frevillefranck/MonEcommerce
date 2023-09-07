@@ -1,0 +1,8 @@
+textarea {
+  resize: none;
+  height: 50px;
+  width: 171px;
+}
+form.inscription {
+  margin-top: 8px;
+}
