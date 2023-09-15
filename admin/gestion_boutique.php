@@ -1,4 +1,6 @@
 <?php require('../inc/init.inc.php'); ?>
+$title = " | Gestion de la boutique";
+
 <?php if (!internauteEstConnecteEtEstAdmin()) {
     header("location: ../connexion.php");
     exit();
@@ -46,7 +48,7 @@ if (!empty($_POST)) {
         $_GET['action'] = 'affichage';
     } else {
         executeRequete("REPLACE INTO produit (id_produit, reference, categorie, titre, description, couleur, taille,public, photo, prix, stock) VALUES('$_POST[id_produit]', '$_POST[reference]', '$_POST[categorie]','$_POST[titre]', '$_POST[description]', '$_POST[couleur]', '$_POST[taille]', '$_POST[public]', '$photo_bdd', '$_POST[prix]', '$_POST[stock]')");
-        $contenu .= '<div class="validation">Le produit a bien été enregitré</div>';
+        $contenu .= '<div class="validation">Le produit a bien été enregistré</div>';
         $_GET['action'] = 'affichage';
     }
 }
@@ -101,20 +103,17 @@ if (isset($_GET['action']) && ($_GET['action'] == "ajout" || $_GET['action'] == 
     <input type="text" id="reference" name="reference" placeholder="La référence du produit" 
     value="';
     if (isset($produit_actuel['reference'])) echo $produit_actuel['reference'];
-    echo '
-    ">
+    echo '">
     <label for="categorie">Catégorie</label>
     <input type="text" id="categorie" name="categorie" placeholder="La catégorie du produit" 
     value="';
     if (isset($produit_actuel['categorie'])) echo $produit_actuel['categorie'];
-    echo '
-    ">
+    echo '">
     <label for="titre">Titre</label>
     <input type="text" id="titre" name="titre" placeholder="Le titre du produit" 
     value="';
     if (isset($produit_actuel['titre'])) echo $produit_actuel['titre'];
-    echo '
-    ">
+    echo '">
     <label for="description">Description</label>
     <textarea id="description" name="description">';
     if (isset($produit_actuel['description'])) echo $produit_actuel['description'];
@@ -124,8 +123,7 @@ if (isset($_GET['action']) && ($_GET['action'] == "ajout" || $_GET['action'] == 
     <input type="text" id="couleur" name="couleur" placeholder="La couleur du produit" 
     value="';
     if (isset($produit_actuel['couleur'])) echo $produit_actuel['couleur'];
-    echo '
-    ">
+    echo '">
     <label for="taille">Taille
         <select name="taille">
         ';

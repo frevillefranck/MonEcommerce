@@ -1,6 +1,6 @@
 <?php
 require('./inc/init.inc.php');
-// Notre accueil  
+$title = " | Accueil";
 require('./inc/haut.inc.php');
 ?>
 <h2>Notre page d'accueil</h2>

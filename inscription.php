@@ -1,5 +1,7 @@
 <?php require('./inc/init.inc.php'); ?>
 <?php
+$title = " | Inscription";
+
 if ($_POST) {
     // debug($_POST);
     $verif_caractere = preg_match('#^[a-zA-Z0-9._-]+$#', $_POST['pseudo']);

@@ -1,6 +1,8 @@
 <?php require('./inc/init.inc.php'); ?>
-<!-- Traitement -->
 <?php
+$title = " | Connexion";
+
+// <!-- Traitement -->
 if (isset($_GET['action']) && $_GET['action'] == "deconnexion") {
     session_destroy();
 }
